@@ -8,11 +8,11 @@ const reminder = (action) => {
 }
 
 const reminders = ( state=[], action ) => {
-	let reminder = null;
+	let reminders = null;
 	switch(action.type) {
 		case ADD_REMINDER:
-			reminder = [...state, reminder(action)];
-			return reminder;
+			reminders = [...state, reminder(action)];
+			return reminders;
 		default:
 			return state;
 	}
